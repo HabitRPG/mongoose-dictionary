@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-dictionary-type",
+  "name": "mongoose-dictionary",
   "version": "1.0.0",
   "description": "A dictionary type for Mongoose",
   "main": "index.js",
