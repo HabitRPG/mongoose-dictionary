@@ -1,10 +1,15 @@
 {
   "name": "mongoose-dictionary",
   "version": "1.0.0",
-  "description": "A dictionary type for Mongoose",
+  "description": "A dictionary plugin for Mongoose",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
-  "license": "GPL v3"
+  "license": "GPL v3",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.5",
+    "mongoose": "^4.0.3"
+  }
 }
