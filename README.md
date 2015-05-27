@@ -19,7 +19,7 @@ var MySchema = new mongoose.Schema({
 MySchema.plugin(dictionaryPlugin, {
   fields: {
     nameOfTheDictionaryField: {
-      field1OfDictionary: String
+      aFieldOfDictionary: String
     }
   }
 });
@@ -31,13 +31,17 @@ var doc = new MyModel({
 });
 
 // IMPORTANT THIS MUST BE CALLED WHEN CREATING A NEW DOCUMENT LOCALLY (NOT RETURNED FROM DB)
-doc.emit('new', doc);
-
+doc.emit('new');
 
 doc.dictionary.$add('key', {
-  field1: 123 // Using a number to show that casting is working
+  aFieldOfDictionary: 123 // Using a number to show that casting is working
 });
 
+doc.dictionary.$add('anotherKey', {
+  aFieldOfDictionary: 123 // Using a number to show that casting is working
+});
+
+doc.dictionary.$remove('anotherKey');
 
 doc.save(function(err, doc){
   console.log(err, doc)
