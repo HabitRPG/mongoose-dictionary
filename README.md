@@ -31,7 +31,7 @@ var doc = new MyModel({
 });
 
 // IMPORTANT THIS MUST BE CALLED WHEN CREATING A NEW DOCUMENT LOCALLY (NOT RETURNED FROM DB)
-doc.emit('new');
+doc.emit('new', doc);
 
 doc.dictionary.$add('key', {
   aFieldOfDictionary: 123 // Using a number to show that casting is working
